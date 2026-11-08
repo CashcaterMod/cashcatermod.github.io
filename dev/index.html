@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CattyMod DevMode</title>
+<title>CashMod DevMode</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
@@ -90,8 +90,8 @@ body { display:flex; min-height:100vh; background:#f9fafb; color:#1f2937; }
   <div id="auth" class="section">
     <div class="section-title">Authentication</div>
     <div class="auth-buttons">
-      <a class="auth-scratch" href="https://auth.itinerary.eu.org/auth?redirect=aHR0cHM6Ly9jYXR0eW1vZC5naXRodWIuaW8vbG9naW4vc2NyYXRjaC1jYWxsYmFjay5odG1s&name=CattyMod" target="_blank"><i class="fas fa-cat"></i> Login with Scratch</a>
-      <a class="auth-github" href="https://github.com/login/oauth/authorize?client_id=Ov23lici45KmYhC3XthS&redirect_uri=https://cattymod.github.io/login/callback.html" target="_blank"><i class="fab fa-github"></i> Login with GitHub</a>
+      <a class="auth-scratch" href="https://auth.itinerary.eu.org/auth?redirect=aHR0cHM6Ly9jYXR0eW1vZC5naXRodWIuaW8vbG9naW4vc2NyYXRjaC1jYWxsYmFjay5odG1s&name=CashMod" target="_blank"><i class="fas fa-cat"></i> Login with Scratch</a>
+      <a class="auth-github" href="https://github.com/login/oauth/authorize?client_id=Ov23lici45KmYhC3XthS&redirect_uri=https://CashMod.github.io/login/callback.html" target="_blank"><i class="fab fa-github"></i> Login with GitHub</a>
       <div class="toggle-container">
         <label>
           Enable Auto-Login
@@ -151,23 +151,23 @@ body { display:flex; min-height:100vh; background:#f9fafb; color:#1f2937; }
 <script>
 // Apps and repos
 const apps=[
-{name:"Dashboard", icon:"fa-solid fa-table-columns", url:"https://cattymod.github.io/hub"},
-{name:"Home", icon:"fas fa-home", url:"https://cattymod.github.io"},
-{name:"Login", icon:"fas fa-door-open", url:"https://cattymod.github.io/login/"},
-{name:"Editor", icon:"fas fa-edit", url:"https://cattymod.github.io/editor"},
-{name:"CattyMod Jr", icon:"fas fa-clone", url:"https://cattymod.github.io/jr"},
-{name:"CattyLinux", icon:"fas fa-cat", url:"https://cattymod.github.io/linux/"},
-{name:"CattyAdmin", icon:"fas fa-gamepad", url:"https://cattymod.github.io/admin/"},
-{name:"Packager", icon:"fas fa-box-open", url:"https://cattymod.github.io/packager/"},
-{name:"ImproveMyScratch", icon:"fas fa-thumbs-up", url:"https://cattymod.github.io/ImproveMyScratch"},
-{name:"CattyPassword Manager", icon:"fas fa-key", url:"https://cattymod.github.io/pass"},
-{name:"Linux Maker", icon:"fas fa-marker", url:"https://cattymod.github.io/linux/maker"},
+{name:"Dashboard", icon:"fa-solid fa-table-columns", url:"https://CashMod.github.io/hub"},
+{name:"Home", icon:"fas fa-home", url:"https://CashMod.github.io"},
+{name:"Login", icon:"fas fa-door-open", url:"https://CashMod.github.io/login/"},
+{name:"Editor", icon:"fas fa-edit", url:"https://CashMod.github.io/editor"},
+{name:"CashMod Jr", icon:"fas fa-clone", url:"https://CashMod.github.io/jr"},
+{name:"CattyLinux", icon:"fas fa-cat", url:"https://CashMod.github.io/linux/"},
+{name:"CattyAdmin", icon:"fas fa-gamepad", url:"https://CashMod.github.io/admin/"},
+{name:"Packager", icon:"fas fa-box-open", url:"https://CashMod.github.io/packager/"},
+{name:"ImproveMyScratch", icon:"fas fa-thumbs-up", url:"https://CashMod.github.io/ImproveMyScratch"},
+{name:"CattyPassword Manager", icon:"fas fa-key", url:"https://CashMod.github.io/pass"},
+{name:"Linux Maker", icon:"fas fa-marker", url:"https://CashMod.github.io/linux/maker"},
 {name:"Scrooch", icon:"fas fa-rocket", url:"https://scrooch-project.github.io", sponsored:true}
 ];
 const githubRepos=[
 {name:"hub (Dashboard)", icon:"fas fa-table-columns", repo:"hub"},
 {name:"login", icon:"fas fa-door-open", repo:"login"},
-{name:"cattymod.github.io", icon:"fas fa-globe", repo:"cattymod.github.io"},
+{name:"CashMod.github.io", icon:"fas fa-globe", repo:"CashMod.github.io"},
 {name:"editor", icon:"fas fa-edit", repo:"editor"},
 {name:"jr", icon:"fas fa-clone", repo:"jr"},
 {name:"linux", icon:"fas fa-cat", repo:"linux"},
@@ -194,7 +194,7 @@ githubRepos.forEach(r=>{
   const card=document.createElement('div'); card.className='dev-card';
   card.innerHTML=`<i class="${r.icon}"></i><span>${r.name}</span>`;
   card.addEventListener('click',()=>{
-    let url=r.name==="Scrooch Project"?"https://github.com/scrooch-project/scrooch-project.github.io":`https://github.com/cattymod/${r.repo}`;
+    let url=r.name==="Scrooch Project"?"https://github.com/scrooch-project/scrooch-project.github.io":`https://github.com/CashMod/${r.repo}`;
     window.open(url,"_blank");
   });
   devReposContainer.appendChild(card);
