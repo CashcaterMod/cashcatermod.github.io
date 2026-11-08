@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | CattyMod</title>
+
+    <script>
+        (function () {
+            const host = window.location.host;
+            const path = window.location.pathname;
+            const hash = window.location.hash;
+
+            // Only run on cattymod.app (and subdomains)
+            if (!host.includes("cattymod.app")) return;
+
+            // Don't redirect the dedicated 404 page
+            if (path === "/404") return;
+
+            let match = null;
+
+            // /123 or /123/
+            if (/^\/\d+\/?$/.test(path)) {
+                match = path.replace(/\//g, "");
+            }
+
+            // /projects/123 or /projects/123/
+            const projectMatch = path.match(/^\/projects\/(\d+)\/?$/);
+            if (projectMatch) {
+                match = projectMatch[1];
+            }
+
+            // #123
+            if (!match && /^#\d+$/.test(hash)) {
+                match = hash.replace("#", "");
+            }
+
+            // redirect
+            if (match) {
+                window.location.replace("https://studio.cattymod.app/#" + match);
+            }
+        })();
+    </script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 300px;
+            width: 80%;
+            margin-bottom: 30px;
+            animation: float 2s ease-in-out infinite;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            color: #ff6f61;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0 30px;
+            color: #555;
+        }
+
+        a.button {
+            background-color: #ff6f61;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        a.button:hover {
+            background-color: #ff4c3b;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @media (max-width: 500px) {
+            h1 { font-size: 2.5rem; }
+            p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://cattymod.app/assets/dango/what.svg" alt="CattyMod 404">
+
+    <h1>404</h1>
+    <p>Oops! The page you’re looking for doesn’t exist.</p>
+
+    <a href="https://cattymod.app" class="button">Go Back Home</a>
+</body>
+</html>
