@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found | CattyMod</title>
+    <title>404 - Page Not Found | CashMod</title>
 
     <script>
         (function () {
@@ -11,8 +11,8 @@
             const path = window.location.pathname;
             const hash = window.location.hash;
 
-            // Only run on cattymod.app (and subdomains)
-            if (!host.includes("cattymod.app")) return;
+            // Only run on CashcaterMod.github.io (and subdomains)
+            if (!host.includes("CashcaterMod.github.io")) return;
 
             // Don't redirect the dedicated 404 page
             if (path === "/404") return;
@@ -37,7 +37,7 @@
 
             // redirect
             if (match) {
-                window.location.replace("https://studio.cattymod.app/#" + match);
+                window.location.replace("https://studio.CashcaterMod.github.io/#" + match);
             }
         })();
     </script>
@@ -102,11 +102,11 @@
     </style>
 </head>
 <body>
-    <img src="https://cattymod.app/assets/dango/what.svg" alt="CattyMod 404">
+    <img src="https://CashcaterMod.github.io/assets/dango/what.svg" alt="CashMod 404">
 
     <h1>404</h1>
     <p>Oops! The page you’re looking for doesn’t exist.</p>
 
-    <a href="https://cattymod.app" class="button">Go Back Home</a>
+    <a href="https://CashcaterMod.github.io" class="button">Go Back Home</a>
 </body>
 </html>
